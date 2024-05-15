@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      const html = document.documentElement;
+      const body = html.children[1];
+      const ul = body.children[0];
+      const secondChildUl = ul.children[1];
+
+      /*il padre di ul è già la costante body, per fini di
+        esercizio imposto un'altra costante che la 
+        definisce tramite l'ul. */
+        
+      const fatherUl = ul.parentElement;
+      const afterBrotherIl = secondChildUl.nextElementSibling;
+      const beforeBrotherIl = secondChildUl.previousElementSibling;
+
+      console.log(fatherUl);
+      console.log(secondChildUl.innerText);
+      console.log(afterBrotherIl.innerText);
+      console.log(beforeBrotherIl.innerText);
+    </script>
+  </body>
+</html>
